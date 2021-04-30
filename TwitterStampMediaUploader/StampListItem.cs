@@ -16,5 +16,8 @@ namespace TwitterStampMediaUploader
 
         [JsonPropertyName("isCover")]
         public bool? IsCover { get; set; }
+
+        [JsonPropertyName("searchTag")]
+        public string SearchTag { get; set; }
     }
 }

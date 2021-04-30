@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -106,6 +107,7 @@ namespace TwitterStampMediaUploader
         {
             var jsonString = JsonSerializer.Serialize(stampList, new JsonSerializerOptions
             {
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
                 IgnoreNullValues = true,
                 WriteIndented = true,
             });
